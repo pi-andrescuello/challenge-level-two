@@ -77,6 +77,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'api-challenge-two'
+          app-name: 'ap-challenge-two'
           slot-name: 'Production'
           publish-profile: '${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}'
