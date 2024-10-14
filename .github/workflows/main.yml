@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: (Develop) Build and deploy Python app to Azure Web App Challenge PI
+name: (Product) Build and deploy Python app to Azure Web App Challenge PI
 
 on:
   push:
@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
 
 env:
-  DB_SERVER: ${{ secrets.DB_SERVER }}'
-  DB_PORT: ${{ secrets.DB_PORT }}'
+  DB_SERVER: '${{ secrets.DB_SERVER }}'
+  DB_PORT: '${{ secrets.DB_PORT }}'
   DB_NAME: '${{ secrets.DB_NAME }}'
   DB_UID: '${{ secrets.DB_UID }}'
   DB_PASS: '${{ secrets.DB_PASS }}'
@@ -79,4 +79,4 @@ jobs:
         with:
           app-name: 'api-challenge-two'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: '${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}'
