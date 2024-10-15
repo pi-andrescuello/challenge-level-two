@@ -11,17 +11,17 @@ on:
   workflow_dispatch:
 
 env:
-  DB_SERVER: '${{ secrets.DB_SERVER }}'
-  DB_PORT: '${{ secrets.DB_PORT }}'
-  DB_NAME: '${{ secrets.DB_NAME }}'
-  DB_UID: '${{ secrets.DB_UID }}'
-  DB_PASS: '${{ secrets.DB_PASS }}'
-  JWT_SECRET: '${{ secrets.JWT_SECRET }}'
-  OPENAI_TYPE: '${{ secrets.OPENAI_TYPE }}'
-  OPENAI_VERSION: '${{ secrets.OPENAI_VERSION }}'
-  OPENAI_KEY: '${{ secrets.OPENAI_KEY }}'
-  OPENAI_BASE: '${{ secrets.OPENAI_BASE }}'
-  OPENAI_ENGINE: '${{ secrets.OPENAI_ENGINE }}'
+  DB_SERVER: ${{ secrets.DB_SERVER }}
+  DB_PORT: ${{ secrets.DB_PORT }}
+  DB_NAME: ${{ secrets.DB_NAME }}
+  DB_UID: ${{ secrets.DB_UID }}
+  DB_PASS: ${{ secrets.DB_PASS }}
+  JWT_SECRET: ${{ secrets.JWT_SECRET }}
+  OPENAI_TYPE: ${{ secrets.OPENAI_TYPE }}
+  OPENAI_VERSION: ${{ secrets.OPENAI_VERSION }}
+  OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+  OPENAI_BASE: ${{ secrets.OPENAI_BASE }}
+  OPENAI_ENGINE: ${{ secrets.OPENAI_ENGINE }}
 
 jobs:
   build:
@@ -79,4 +79,5 @@ jobs:
         with:
           app-name: 'api-challenge-two'
           slot-name: 'Production'
-          publish-profile: '${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          package: .
